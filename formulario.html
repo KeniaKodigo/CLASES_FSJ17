@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registro de Usuarios</h1>
+    <!--
+        dentro de la etiqueta <form> tenemos 2 propiedades: action, method
+        action: redirecciona adonde queremos enviar la informacion
+        method: Peticiones para la informacion del formulario (POST (hace envios datos), PUT (actualiza datos), DELETE (elimina datos), GET (obtener informacion))
+    -->
+    <form action="index.html" method="">
+        <!--
+            <label>: Etiqueta que nos sirve para asignar un mensaje, indicacion
+            input:
+                type= text, number, radio, checkbox, date, time, password, email, file, button, submit
+                    datetime-local, reset, image
+
+                type radio: se selecciona una unica opcion
+                type checkbox: se pueden seleccionar varias opciones
+            ol, ul
+            button
+            select
+            <br>: saltos de linea
+        -->
+        <br>
+        <label for="">Nombre Completo:</label>
+        <input type="text" placeholder="Ingresa tu nombre completo">
+        <br>
+        <label for="">Telefono</label>
+        <input type="number" placeholder="Ingresa tu numero de telefono">
+        <br>
+        <label for="">Edad</label>
+        <input type="number" placeholder="Ingresa tu edad">
+        <br>
+        <!-- asignando lista ordenada -->
+        <label for="">Selecciona tus hobbies</label>
+        <ol>
+            <li><input type="checkbox"> Ver anime</li>
+            <li><input type="checkbox"> Leer Libros</li>
+            <li><input type="checkbox"> Jugar Fultbol</li>
+            <li><input type="checkbox"> Cocinar</li>
+            <li><input type="checkbox"> Programar</li>
+        </ol>
+        <label for="">Seleccion Genero</label>
+        <input type="radio" name="genero">M
+        <input type="radio" name="genero">F
+        <br>
+        <label for="">¿En que area trabajas?</label>
+        <select name="" id="">
+            <option value="Educacion">Educacion</option>
+            <option value="Medicina">Medicina</option>
+            <option value="Informatica">Informatica</option>
+            <option value="Deporte">Deporte</option>
+        </select>
+        <br>
+        <label for="">Usuario</label>
+        <input type="text" placeholder="Ingrese su usuario">
+        <br>
+        <label for="">Contraseña</label>
+        <input type="password" placeholder="Ingrese su contraseña">
+        <br>
+        <label for="">Fecha de nacimiento</label>
+        <input type="date"><br>
+        <label for="">Foto de perfil</label>
+        <input type="file"><br>
+        <!-- tipos de botones -->
+        <button>Agregar Usuario</button> <!-- no genera ningun tipo de accion, hasta que nosotros le indiquemos -->
+        <input type="reset"> <!-- genera la accion de restablecer los input a como estaban al principio -->
+        <input type="submit"> <!-- hace referencia al apartado del action del formulario -->
+    </form>
+
+</body>
+</html>

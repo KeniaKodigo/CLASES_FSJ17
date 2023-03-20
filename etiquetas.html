@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        <b>: Solo proporciona estilo a los valores en negrita
+        <i>: Formatea el texto en cursiva
+        <strong>: Etiqueta que sirve para mostrar algo relevante de un texto
+        <em>: Formate el texto en cursiva cuando se quiere mostrar mas relevancia al texto
+    -->
+    <p>
+        <b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quisquam minima quos beatae animi quaerat asperiores, modi fugit odit suscipit commodi sit possimus. Neque commodi cum quo deserunt reprehenderit sapiente?</b>
+    </p>
+
+    <p>
+        <strong>Hola chicos!</strong> Bienvenidos a un nuevo curso de html con <em>Bootcamp FSJ17</em>
+    </p>
+
+    <p>
+        <i>Estamos en el bootcamp FSJ17</i>
+    </p>
+
+    <h2>Trabajando con listas</h2>
+    <!--
+        datalist: Genera una lista con multiples de opciones
+    -->
+    <input list="cursos">
+    <datalist id="cursos">
+        <option value="HTML"></option>
+        <option value="CSS"></option>
+        <option value="JavaScript"></option>
+        <option value="React JS"></option>
+    </datalist>
+
+    <h2>Trabajando con detalles</h2>
+    <!--
+        details: Especifica detalles adicionales de un contenido
+        summary: Especifica el titulo de los detalles
+    -->
+    <details>
+        <summary>HTML</summary>
+        <p>Es un curso que te va servir para estructuras paginas web</p>
+        <details>
+            <summary>Etiquetas</summary>
+            <p>
+                Conoceras las etiquetas basicas
+            </p>
+        </details>
+    </details>
+    <!--
+        <figure> Se utiliza como contenedor donde podemos colocar imagenes,
+            archivos, videos, codigo
+        figcaption: Se utiliza para asignar el titulo de figure
+    -->
+    <figure>
+        <img src="./lugares-visitar-uk.gif" alt="lugares">
+        <figcaption>Lugares Turisticos</figcaption>
+    </figure>
+</body>
+</html>

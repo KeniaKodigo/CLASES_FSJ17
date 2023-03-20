@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tabla de Usuarios</h1>
+    <table border="1" cellpadding="6" cellspacing="0">
+        <!--
+            encabezado: <thead>
+            contenido principal: <tbody>
+            pie de pagina: <tfoot>
+            celdas o columnas: <td>
+            filas: <tr>
+
+            Propiedades de la tabla:
+            -cellpadding: Sirve para el espacio del contenido y la celda
+            -cellspacing: Sirve para el espaciado del border
+            -rowspan: Sirve para unir filas
+            -colspan: Sirve para unir celdas (columnas)
+        -->
+        <thead>
+            <th>Nombre Completo</th>
+            <th>Pais</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Maria Chacon</td>
+                <td>Honduras</td>
+            </tr>
+            <tr>
+                <td>Juan Alvarez</td>
+                <td rowspan="2">Colombia</td>
+            </tr>
+            <tr>
+                <td>Kevin Ramirez</td>
+            </tr>
+            <tr>
+                <td>Katherine Soliz</td>
+                <td>Guatemala</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <!-- uniendo 2 celdas 
+                    <b>: da formato en negrita los valores
+                    <i>: da formato en cursiva (italic)
+                -->
+                <td colspan="2"><b><i>Kenia 2023</i></b></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
