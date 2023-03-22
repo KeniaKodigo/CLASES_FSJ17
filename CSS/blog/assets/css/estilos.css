@@ -1,3 +1,6 @@
+/** importando una fuente */
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+
 /** selector universal para el reseteo de la pagina */
 *{
     /**
@@ -5,6 +8,12 @@
      */
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /** validamos que las cajas hijas esten solo en el contenedor padre */
+}
+
+body{
+    /** asignando tipo de fuente */
+    font-family: 'Alkatra', cursive;
 }
 
 header{
@@ -37,5 +46,97 @@ nav ul li a{
     color: white;
     text-decoration: none; /** no va tener ninguna decoracion el texto */
 }
+
+/** agregando estilos al contenido principal */
+.box-center{
+    width: 80%; /** define el ancho */
+    margin: auto; /** se toma el margen automatico que provee el navegador */
+    padding: 25px; 
+}
+
+.titulo{
+    text-align: center;
+    /** 
+        1rem => 16px
+    */
+    font-size: 2rem; /** asignando tamaño de la fuente */
+    color: #4D6045;
+}
+
+section{
+    display: flex; /** indicamos que el contenedor va ser flexible */
+    justify-content: space-around;
+}
+
+#image{
+    width: 60%;
+}
+
+footer{
+    background-color: #101E48;
+}
+
+/** 
+    display: Asigna como va trabajar un elemento
+        -inline-block: elementos que se ponen en bloquen y en linea
+        -flex: los elementos se asignan de forma flexibe
+        -grid: los elementos estaran asociados en columnas y filas
+*/
+
+.footer_container{
+    display: grid;
+    /** asignamos cuantas columnas queremos  */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 50px 0; /** 50px arriba y abajo, 0 pixeles derecha e izquierda */
+    /** gap: espacio que le asignamos dentro de las columnas */
+    gap: 20px;
+    color: white;
+}
+
+/** diseñando el apartado de los iconos */
+.margen{
+    margin: 30px 0;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap; /** estamos trabajando con elementos si van estar en fila y los estamos en volviendo
+                            en una sola linea */
+}
+
+.icons a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #509F36;
+    border-radius: 50%;
+    color: white;
+    margin: 5px;
+}
+
+.footer_container .info .icons{
+    width: 60%;
+}
+
+.footer_container .info .icons a{
+    width: 50px;
+    height: 50px;
+}
+
+/** 
+    pseudoclase: hover
+*/
+.footer_container .info .icons a:hover{
+    background: transparent;
+}
+
+
+
+
+
+
 
 
