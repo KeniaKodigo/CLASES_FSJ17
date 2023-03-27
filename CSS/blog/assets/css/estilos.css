@@ -42,6 +42,7 @@ nav ul li{
     margin: 10px;
 }
 
+
 nav ul li a{
     color: white;
     text-decoration: none; /** no va tener ninguna decoracion el texto */
@@ -63,7 +64,7 @@ nav ul li a{
     color: #4D6045;
 }
 
-section{
+.box-section{
     display: flex; /** indicamos que el contenedor va ser flexible */
     justify-content: space-around;
 }
@@ -71,6 +72,7 @@ section{
 #image{
     width: 60%;
 }
+
 
 footer{
     background-color: #101E48;
@@ -134,7 +136,115 @@ footer{
 }
 
 
+/** apartado de viajes.html */
+.seccion-card{
+    display: flex; /** indicamos que los elementos van a ser flexibles */
+    justify-content: space-around;
+    flex-flow: row wrap; /** envuelve los elementos en una fila */
+}
 
+.card{
+    width: 30%;
+    height: 300px;
+    /** colocando sombra al contenedor */
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5); /** x (horizontal), y(vertical), blur-radius (desenfoque), spread-radius (propagacion), color */
+    margin-bottom: 30px;
+    background-size: cover; /** indicamos que lo haya dentro de la caja se va adaptar al tamaño de la tarjeta */
+    background-position: center; /** indicamos el posicionamiento de los elementos de la tarjeta */
+    transition: all .5s;
+}
+
+.seccion-card img{
+    /** */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /** solo se utiliza para imagenes o videos que se adapten al tamaño del contenedor */
+    
+}
+
+.card:hover{
+    transform: scale(1.1); /** x= 1.1, y = 1.1) */
+}
+
+/** apartado de contacto.html */
+.contact-fondo{
+    background-image: url("../img/viaje4.jpg");
+    height: 30rem; /** 1rem = 16px */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -100px;
+}
+
+.formulario{
+    background-color: rgba(192, 192, 192, 0.3);
+    margin: -10rem auto 0 auto; /** top, right, bottom, left */
+    width: 95%;
+    padding: 3rem;
+}
+
+form label{
+    font-weight: bold; /** peso de la letra */
+}
+
+/** selector por atributo */
+input[type="text"],
+input[type="email"]{
+    width: 100%;
+    height: 30px;
+    padding: 3px 10px; /** top-bottom - right-left */
+    border: 1px solid #f6f6f6;
+    border-radius: 3px;
+    margin: 8px 0;
+    display: block; /** los elementos se aplican uno abajo del otro */
+}
+
+textarea{
+    width: 100%;
+    height: 100px;
+    border: 1px solid #f6f6f6;
+    border-radius: 3px;
+    margin: 8px 0;
+    display: block; /** los elementos se aplican uno abajo del otro */
+}
+
+input[type="submit"]{
+    width: 100%;
+    padding: 8px;
+    margin-top: 32px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+}
+
+
+
+/** aplicando media query */
+
+@media (max-width: 1100px){
+    .icons{
+        width: 100% !important; /** con el !important asignamos que esto va ser mas importante */
+    }
+}
+
+/** aplicando estilos para pantallas pequeñas */
+@media (max-width: 550px){
+    .box-section{
+        display: inline-block;
+        text-align: center;
+    }
+
+    .footer_container{
+        /** asignamos una sola columna */
+        grid-template-columns: 1fr;
+    }
+
+    /** apartado de viajes.html */
+    .card{
+        width: 100%;
+    }
+
+}
 
 
 
