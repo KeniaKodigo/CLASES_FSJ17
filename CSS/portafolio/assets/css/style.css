@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Tillana&display=swap');
+
+/** resetear margen y padding */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+}
+
+h1{
+    font-family: 'Lobster', cursive;
+    font-size: 5rem;
+    color: #375a41;
+    text-shadow: 5px 5px 2px #93bb81;
+}
+
+h2{
+    font-family: 'Tillana', cursive;
+    font-size: 3.5rem;
+    color: #375a41;
+}
+
+#developer{
+    text-decoration: underline;
+}
+
+header{
+    background-color: #E4F9F5;
+    padding-top: 20px;
+    position: relative;
+}
+
+#cloud-top{
+    position: absolute;
+    right: 250px;
+    top: 50px;
+}
+
+#cloud-bottom{
+    position: absolute;
+    bottom: 300px;
+    left: 200px;
+}
+
+main{
+    margin: 100px 0;
+}
+
+/** parrafo del contenedor del perfil */
+.paragrahp{
+    width: 30%;
+    margin: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.skills-row{
+    width: 50%;
+    margin: 100px auto;
+}
