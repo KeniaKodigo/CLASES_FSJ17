@@ -67,6 +67,7 @@ nav ul li a{
 .box-section{
     display: flex; /** indicamos que el contenedor va ser flexible */
     justify-content: space-around;
+    align-items: center;
 }
 
 #image{
@@ -173,6 +174,11 @@ footer{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center -100px;
+    
+}
+
+#viaje-img{
+    filter: contrast(25%);
 }
 
 .formulario{

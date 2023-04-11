@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Pratica Bootstrap</title>
+</head>
+<body>
+    <header>
+        <h1 class="text-center fs-2">Practica de Bootstrap</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    <main class="container">
+        <h1>Tabla de datos</h1>
+        <table class="table table-primary table-hover">
+            <thead>
+                <th>N°</th>
+                <th>Estudiante</th>
+                <th>Bootcamp</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <th>Karla Soliz</th>
+                    <th>FJS17</th>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <th>Antonio Hernandez</th>
+                    <th>FJS12</th>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <th>Diego Huezo</th>
+                    <th>FJS17</th>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="text-end">Formulario de Usuarios</h2>
+        <form action="">
+            <label for="" class="form-label">Nombre Completo</label>
+            <input class="form-control" type="text" placeholder="Ingresa tu nombre">
+
+            <label for="" class="form-label">Selecciona tu Hobbie</label>
+            <select name="" id="" class="form-control">
+                <option value="">Ver Peliculas</option>
+                <option value="">Leer</option>
+                <option value="">Ver anime</option>
+                <option value="">Videojuegos</option>
+            </select>
+
+            <label for="" class="form-label">Fecha de nacimiento</label>
+            <input type="date" class="form-control">
+
+            <!--
+                m = margin (top, bottom, rigth, left)
+                mt = margin-top
+                mb = margin-bottom
+                ms = margin-left
+                me = margin-rigth
+
+                Igual es para el padding (p)
+            -->
+            <button class="btn btn-success mt-3">Enviar Datos</button>
+        </form>
+
+        <h2 class="text-center">Tarjetas, Trabajando con flex</h2>
+        <section class="d-flex justify-content-center">
+            <div class="card me-3" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+
+            <div class="card me-3" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </section>
+
+        <h2>Trabajando con Grillas</h2>
+        <div class="row">
+            <div class="col-md-4 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Imagenes</h2>
+        <section class="d-flex justify-content-center">
+            <img class="img-fluid w-50" src="https://cc-prod.scene7.com/is/image/CCProdAuthor/7%20AdobeStock_335413355?$png$&jpegSize=200&wid=960" alt="paisaje">
+        </section>
+
+        <h2>Utilizando Float</h2>
+        <div>
+            <div class="bg-info p-4 float-start w-50">
+                <h3 class="text-bg-light text-center">Tema 1</h3>
+                <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eligendi, nobis dicta, dolore maiores similique aliquam exercitationem iure in aspernatur error inventore. Fugit incidunt maxime cumque unde. Beatae, sunt impedit.</p>
+            </div>
+
+            <div class="bg-secondary p-4 float-end w-50">
+                <h3 class="text-bg-primary text-end">Tema 2</h3>
+                <p class="text-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed totam accusantium quam culpa officia reiciendis ratione amet perspiciatis ex aliquam enim ab fuga, id dolore ut eum veritatis voluptatum reprehenderit.</p>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="js/bootstrap.min.js"></script>
+</html>
