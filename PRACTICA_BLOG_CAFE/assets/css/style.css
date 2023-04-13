@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.6rem;
+}
+
+.contenedor{
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    background-image: url(../img/banner.jpg);
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header_texto{
+    text-align: center;
+    color: white;
+    margin-top: 5rem;
+}
+
+.barra{
+    padding-top: 4rem;
+}
+
+.logo{
+    color: white;
+}
+
+.navegacion_enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.entrada{
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 2rem;
+}
+
+.boton{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    border: none;
+    background-color: black;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+.cursos{
+    list-style: none;
+}
+
+.widget-curso{
+    border-bottom: 1px solid #fff9f9;
+    margin-bottom: 2rem;
+}
+
+footer{
+    background-color: black;
+    padding-bottom: 3rem;
+    margin-top: 4rem;
+    color: white;
+}
+
+/** apartado de cursos.html **/
+.curso {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+}
+.cursos-titulo{
+    text-align: center;
+    padding: 3rem;
+}
+.curso__label{
+    font-weight: bold;
+    /** top-botton = 25  left-right = 0 */
+    margin: 25px 0;
+}
+.curso__info {
+    font-weight: normal;
+}
+.curso__label,
+.curso__info {
+    font-size: 2rem;
+}
+.curso__descripcion{
+    text-align: justify;
+    font-weight: 100;
+}
+
+/** Apartado de contactos */
+.contacto-bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.formulario {
+    background-color: white;
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+.campo__field{
+    width: 50%;
+}
+.texto{
+    height: 3rem;
+}
+textarea{
+    height: 10rem;
+}
+
+/** media query para pantallas grandes */
+@media (min-width: 992px){ /* 992 en adelante */
+    .contenido-principal{
+        display: grid;
+        /*grid-template-columns: 1fr 1fr 1fr;*/
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .barra{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav{
+        display: flex;
+    }
+    nav a{
+        padding: 5px;
+    }
+
+    /*section{
+        display: grid;
+        grid-column: 1/3;
+    }
+
+    aside{
+        display: grid;
+        grid-column: 3/4;
+    }*/
+}
+
+/** media query para tablet */
+@media (min-width: 768px) and (max-width:991px){
+    .boton{
+        background-color: chocolate;
+    }
+}
+
+/** media query para pequeñas */
+@media (max-width: 767px){ /* 767 para abajo **/
+    .boton{
+        background-color: rgb(22, 179, 11);
+    }
+}
