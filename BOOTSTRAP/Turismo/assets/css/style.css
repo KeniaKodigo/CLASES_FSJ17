@@ -1,0 +1,14 @@
+#banner{
+    height: 400px;
+    background-image: url('../img/shutterstock_116403520.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -100px;
+}
+
+@media (max-width: 570px){
+    #banner{
+        height: 250px;
+        background-position: center;
+    }
+}

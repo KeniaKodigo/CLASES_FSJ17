@@ -58,7 +58,7 @@
                         </li>
                     </ul>
                     <div>
-                        <button type="button" class="btn btn-outline-primary rounded-pill btn-sm">Contactanos</button>
+                        <a href="./formulario.html" class="btn btn-outline-primary rounded-pill btn-sm">Contactanos</a>
                     </div>
                 </div>
             </div>
@@ -105,21 +105,23 @@
         </section>
 
         <!-- apartado de productos -->
-        <h2 class="text-center py-4 fs-1 border-bottom">Productos</h2>
+        <h2 class="text-center py-4 fs-1 border-bottom mb-4">Productos</h2>
         <div class="row">
-            <div class="col-12 col-lg-3 col-sm-6 mb-4 pt-4">
+            <div class="col-12 col-lg-3 col-sm-6 mb-4">
                 <div class="card">
                     <img src="./img/producto1.jpg" class="card-img-top box-img" alt="iphone">
                     <div class="card-body">
                         <h5 class="card-title">Iphone</h5>
                         <p class="card-text">Some quick example text to buizld on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Comprar</a>
-                        <a href="#" class="btn btn-secondary">Detalles</a>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Detalles
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-lg-3 col-sm-6 mb-4 pt-4">
+            <div class="col-12 col-lg-3 col-sm-6 mb-4">
                 <div class="card">
                     <img src="./img/producto2.jpg" class="card-img-top box-img" alt="iphone">
                     <div class="card-body">
@@ -131,7 +133,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-lg-3 col-sm-6 mb-4 pt-4">
+            <div class="col-12 col-lg-3 col-sm-6 mb-4">
                 <div class="card">
                     <img src="./img/producto3.jpg" class="card-img-top box-img" alt="iphone">
                     <div class="card-body">
@@ -144,7 +146,7 @@
             </div>
 
 
-            <div class="col-12 col-lg-3 col-sm-6 mb-4 pt-4">
+            <div class="col-12 col-lg-3 col-sm-6 mb-4">
                 <div class="card">
                     <img src="./img/producto4.jpg" class="card-img-top box-img" alt="iphone">
                     <div class="card-body">
@@ -206,6 +208,98 @@
             </div>
         </div>
     </main>
+    <!-- Apartado de testimonios -->
+    <div class="container-fluid bg-dark text-white px-0 py-3">
+        <section class="container">
+            <!--
+                <b>
+                <strong>
+            -->
+            <h2 class="text-center display-3">Palabras de <strong>nuestros clientes</strong></h2>
+            <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque cum vitae, facere, aperiam vel dolor consequuntur saepe assumenda, autem hic beatae tenetur. Eum dolorem asperiores saepe est maiores error tenetur?</p>
+        </section>
+        <!-- apartado de carousel -->
+        <section>
+            <div id="carouselTesti" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicadores -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselTesti" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselTesti" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselTesti" data-bs-slide-to="2"></button>
+                </div>
+                <!-- Sliders -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="m-auto img-carousel">
+                            <img src="./img/profile1.jpg" alt="" class="w-100 h-100 rounded-circle">
+                        </div>
+                        <div class="carousel-caption position-static w-50 pb-5 m-auto">
+                            <h3 class="fw-light m-0">...</h3>
+                            <h4 class="fw-normal text-primary">..</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, ad quam? Eveniet magni accusantium omnis quis non ducimus at voluptas.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="img-area m-auto img-carousel">
+                            <img src="./img/profile2.jpg" alt="" class="w-100 h-100 rounded-circle">
+                        </div>
+                        <div class="carousel-caption position-static w-50 pb-5 m-auto">
+                            <h3 class="fw-light m-0">...</h3>
+                            <h4 class="fw-normal text-primary">...</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, ad quam? Eveniet magni accusantium omnis quis non ducimus at voluptas.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="img-area m-auto img-carousel">
+                            <img src="./img/profile3.jpg" alt="" class="w-100 h-100 rounded-circle">
+                        </div>
+                        <div class="carousel-caption position-static w-50 pb-5 m-auto">
+                            <h3 class="fw-light m-0">...</h3>
+                            <h4 class="fw-normal text-primary">...</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, ad quam? Eveniet magni accusantium omnis quis non ducimus at voluptas.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Botones -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTesti" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselTesti" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+    </div>
+    <!-- apartado del footer -->
+    <footer class="bg-black text-white text-center p-3">
+        <h3>Todos los derechos reservados, Kenia Paiz</h3>
+    </footer>
+
+    <!-- apartado del modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Iphone</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex justify-content-center align-items-center">
+                <div class="ms-3">
+                    <img src="./img/producto1.jpg" alt="iphone" class="w-100">
+                </div>
+                <div class="ms-3">
+                    <p class="parrafo-modal text-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora molestiae sit illum provident, assumenda, ex sapiente eos quos aut voluptate obcaecati soluta illo neque ullam quasi maxime ab quam. Laboriosam.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </html>
