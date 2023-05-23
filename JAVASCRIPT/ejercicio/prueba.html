@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>COCHES</h1>
+    <label for="">Seleccione el coche</label>
+    <select name="" id="coches" onchange="CalcularCoche()">
+        <option value=""></option>
+        <option value="FORD FIESTA">FORD FIESTA</option>
+        <option value="FORD FOCUS">FORD FOCUS</option>
+        <option value="FORD SCAPE">FORD SCAPE</option>
+    </select>
+
+    <div class="contenedor-tabla"></div>
+</body>
+<script>
+    /** PROGRAMACION ESTRUCTURADA: TRABAJAR CON ESTRUCTURAS DE CONTROL Y FUNCIONES **/
+    function CalcularCoche(){
+        let contenedor = document.querySelector('.contenedor-tabla');
+        let coche = document.querySelector('#coches'); //select
+        switch(coche.value){
+            case "FORD FIESTA":
+                const tabla = document.createElement('table');
+                //<table></table>
+                tabla.innerHTML = `<tr>
+                    <td>$3500</td>
+                    <td>FOR FIESTA</td>
+                    </tr>`;
+                
+                contenedor.appendChild(tabla);
+                break;
+            case "FORD FOCUS":
+                
+                break;
+            case "FORD SCAPE":
+                
+                break;
+            default:
+                parrafo.textContent = "Elige un tipo de coche";
+        }
+    }
+</script>
+</html>

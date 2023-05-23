@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>COCHES</h1>
+    <label for="">¿Cuanto cuesta el coche?</label>
+    <input type="text" class="precio"><br>
+
+    <label for="">Seleccione el coche</label>
+    <select name="" id="coches">
+        <option value=""></option>
+        <option value="FORD FIESTA">FORD FIESTA</option>
+        <option value="FORD FOCUS">FORD FOCUS</option>
+        <option value="FORD SCAPE">FORD SCAPE</option>
+    </select>
+
+    <button>Calcular</button>
+
+    <!-- salida de datos -->
+    <p></p>
+</body>
+<script>
+    let buton = document.querySelector('button'); //<button>
+    buton.addEventListener('click', () => {
+        /** inicio de variables */
+        let precio = document.querySelector('.precio').value;//input
+        let coche = document.querySelector('#coches'); //select
+
+        
+        let parrafo = document.querySelector('p'); //<p>
+        let descuento = 0;
+        console.log(precio);
+        switch(coche.value){
+            case "FORD FIESTA":
+                descuento = precio * 0.95; //5% => 0.05 150
+                //descuento = (precio * 0.05) - precio
+                parrafo.innerHTML = `<b>Tu total a pagar ${descuento} y se te desconto el 5%</b>`;
+                //15% (aumento) = 1.15 
+                //sueldo * 1.15 = 575
+                //(sueldo * 0.15) + sueldo = 575
+                break;
+            case "FORD FOCUS":
+                descuento = precio * 0.90; //5% => 0.05 150
+                //descuento = (precio * 0.05) - precio
+                parrafo.innerHTML = `<b>Tu total a pagar ${descuento} y se te desconto el 10%</b>`;
+                //15% (aumento) = 1.15 
+                //sueldo * 1.15 = 575
+                //(sueldo * 0.15) + sueldo = 575
+                break;
+            case "FORD SCAPE":
+                descuento = precio * 0.80; //5% => 0.05 150
+                //descuento = (precio * 0.05) - precio
+                parrafo.innerHTML = `<b>Tu total a pagar ${descuento} y se te desconto el 20%</b>`;
+                //15% (aumento) = 1.15 
+                //sueldo * 1.15 = 575
+                //(sueldo * 0.15) + sueldo = 575
+                break;
+            default:
+                parrafo.textContent = "Elige un tipo de coche";
+        }
+    })
+</script>
+</html>
