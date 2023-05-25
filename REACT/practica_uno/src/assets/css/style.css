@@ -1,0 +1,17 @@
+h1{
+    text-align: center;
+    color: seagreen;
+}
+
+p{
+    text-align: center;
+}
+
+#menu{
+    background-color: darkgrey;
+    text-decoration: none;
+}
+
+#menu ul li{
+    display: inline-block;
+}
