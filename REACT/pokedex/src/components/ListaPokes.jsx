@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import CardPokemon from './CardPokemon';
 
 export default function ListaPokes() {
     //declarando un estado para el arreglo de pokemones
@@ -7,7 +8,7 @@ export default function ListaPokes() {
     //metodo para llamar a la api pokemon
     const getPokemones = async () => {
         //estamos solicitando una peticion asincrona por medio de fetch para que nos devuelva una promesa
-        const resultado = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100");
+        const resultado = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100&offset=0");
         //convertimos la promesa en un json
         const datos = await resultado.json();
 
@@ -22,6 +23,9 @@ export default function ListaPokes() {
 
                 //... indica una copia de un arreglo
                 setPokemones((listaActual) => [...listaActual, datopoke]);
+                //ordenamos el arreglo
+                await pokemones.sort((a, b) => a.id - b.id);
+                
             });
         }
 
@@ -40,7 +44,41 @@ export default function ListaPokes() {
 
     console.log(pokemones); //[]
     return (
-        <div>ListaPokes</div>
+        <div className='row'>
+            {
+                pokemones.map((pokemon, indice) => (
+                        <div className='col-md-4'>
+                        {/* mandando la informacion del pokemon en otro componente */}
+
+                        <CardPokemon 
+                            key = {indice}
+                            id = {pokemon.id.toString().padStart(3,"0")}
+                            name = {pokemon.name}
+                            specie = {pokemon.species.name}
+                            image = {pokemon.sprites.other["official-artwork"].front_default}
+                            height = {pokemon.height}
+                            weight = {pokemon.weight}
+                            stats = {pokemon.stats[0].base_stat}
+                        />
+                    </div>
+                    
+                        /*<div key={indice}>
+                            <h1>{pokemon.name}</h1>
+                            <p>Id: {pokemon.id}</p>
+                            <p>Specie: {pokemon.species.name}</p>
+                            <p>Stats: {pokemon.stats[0].base_stat}</p>
+                            {
+                                pokemon.stats.map((elemento) => {
+                                    return (
+                                        <p>{elemento.base_stat}</p>
+                                    )
+                                })
+                            }
+                        </div>*/
+                    
+                ))
+            }
+        </div>
     )
 }
 

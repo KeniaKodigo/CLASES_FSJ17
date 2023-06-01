@@ -1,10 +1,13 @@
 import ListaPokes from './components/ListaPokes'
+import './assets/css/style.css'
 
 function App() {
   
     return (
       <>
-        <ListaPokes />
+        <div className='container'>
+          <ListaPokes />
+        </div>
       </>
     )
 }

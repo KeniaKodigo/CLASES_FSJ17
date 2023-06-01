@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+h2{
+    font-family: 'Caveat', cursive;
+    font-size: 2.5rem;
+}
+
+.contenedor-img{
+    text-align: center;
+    transition: all .5s;
+}
+
+.contenedor-img:hover{
+    transform: scale(1.1);
+}
+
+.contenedor-img img{
+    max-width: 200px;
+    filter: drop-shadow(2px 4px 12px black);
+}
+
+table, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td{
+    padding: 10px;
+}
+
+.title{
+    font-weight: bold;
+}
