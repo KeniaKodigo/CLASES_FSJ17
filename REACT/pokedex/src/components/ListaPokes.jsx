@@ -24,7 +24,9 @@ export default function ListaPokes() {
                 //... indica una copia de un arreglo
                 setPokemones((listaActual) => [...listaActual, datopoke]);
                 //ordenamos el arreglo
-                await pokemones.sort((a, b) => a.id - b.id);
+                await pokemones.sort((a, b) => {
+                    return (a.id < b.id)
+                });
                 
             });
         }
@@ -44,6 +46,7 @@ export default function ListaPokes() {
 
     console.log(pokemones); //[]
     return (
+
         <div className='row'>
             {
                 pokemones.map((pokemon, indice) => (
@@ -52,13 +55,14 @@ export default function ListaPokes() {
 
                         <CardPokemon 
                             key = {indice}
-                            id = {pokemon.id.toString().padStart(3,"0")}
+                            id = {pokemon.id}
                             name = {pokemon.name}
                             specie = {pokemon.species.name}
                             image = {pokemon.sprites.other["official-artwork"].front_default}
                             height = {pokemon.height}
                             weight = {pokemon.weight}
                             stats = {pokemon.stats[0].base_stat}
+                            type = {pokemon.types[0].type.name}
                         />
                     </div>
                     

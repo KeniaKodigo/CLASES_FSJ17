@@ -8,7 +8,8 @@ export default function CardPokemon({
     image, 
     height, 
     weight, 
-    stats  
+    stats, 
+    type  
 }){
         return (
             <div>
@@ -36,6 +37,10 @@ export default function CardPokemon({
                     <tr>
                         <td className='title'>Stats</td>
                         <td>{stats}</td>
+                    </tr>
+                    <tr>
+                        <td className='title'>Type</td>
+                        <td>{type}</td>
                     </tr>
                 </table>
             </div>
