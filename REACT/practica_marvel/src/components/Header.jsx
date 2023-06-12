@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Home from './Home'
 import Comics from './Comics'
 import Series from './Series'
+import BuscarPersonaje from './BuscarPersonaje'
 
 export default function Header() {
     return (
@@ -30,6 +31,7 @@ export default function Header() {
                 <Route path='/' element={<Home />}/>
                 <Route path='/comics' element={<Comics />}/>
                 <Route path='/series' element={<Series />}/>
+                <Route path='/busqueda' element={<BuscarPersonaje />}/>
             </Routes>
         </BrowserRouter>
     )
