@@ -37,6 +37,47 @@ export default function BuscarPersonaje() {
                     <input type="text" className='form-control' onChange={handleName}/>
                     <button className='btn btn-primary' type='submit'>Ver Personaje</button>
                 </form>
+                <br />
+                {/* apartado del contenido de cada personaje*/}
+
+
+                {
+                    personajes.length === 0 ? (
+                        <div class="alert alert-danger" role="alert">
+                            No se encontraron resultados
+                        </div>
+                    ) : (
+                        <>
+                            {
+                                personajes.map((personaje, indice) => {
+                                    return(
+                                        <div className='p-4'>
+                                            <h2 className='text-center'>Hola Soy {personaje.name}</h2>
+                                            <div className='row'>
+                                                <div className='col-md-4 mt-4'>
+                                                    <img src={`${personaje.thumbnail.path}.${personaje.thumbnail.extension}`} alt={personaje.name} className='img-fluid'/>
+                                                </div>
+
+                                                <div className='col-md-8 mt-4 px-5'>
+                                                    <h3 className='text-center'>Comics</h3>
+                                                    <ol>
+                                                        {
+                                                            personaje.comics.items.map((comic, indice) => {
+                                                                return (
+                                                                    <li>{comic.name}</li>
+                                                                )
+                                                            })
+                                                        }
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </>
+                    )
+                }
             </div>
         </div>
     )

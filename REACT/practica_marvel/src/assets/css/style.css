@@ -23,3 +23,7 @@ nav ul li{
     text-decoration: none;
     color: white;
 }
+
+ol{
+    gap: 200px;
+}
